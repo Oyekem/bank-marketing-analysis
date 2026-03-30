@@ -1,1 +1,131 @@
+# bank_marketing_dashboard.py
+
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import streamlit as st
+
+# -----------------------------
+# Page Setup
+# -----------------------------
+st.set_page_config(page_title="Bank Marketing Dashboard", page_icon="💰", layout="wide")
+
+# -----------------------------
+# Load Dataset
+# -----------------------------
+df = pd.read_csv("data/bank-full.csv", sep=";")
+
+# Convert date columns if necessary (here campaign contact day)
+df['day'] = pd.to_datetime(df['day'], format='%d', errors='coerce')
+df['month'] = df['month'].str.capitalize()
+
+# Fill missing or unknown values
+df['job'].fillna("Unknown", inplace=True)
+df['education'].fillna("Unknown", inplace=True)
+df['contact'].fillna("Unknown", inplace=True)
+df['poutcome'].fillna("Unknown", inplace=True)
+
+# -----------------------------
+# Sidebar Filters
+# -----------------------------
+st.sidebar.header("Filter Options")
+
+job_filter = st.sidebar.multiselect(
+    "Select Job:",
+    options=df['job'].unique(),
+    default=df['job'].unique()
+)
+
+education_filter = st.sidebar.multiselect(
+    "Select Education:",
+    options=df['education'].unique(),
+    default=df['education'].unique()
+)
+
+marital_filter = st.sidebar.multiselect(
+    "Select Marital Status:",
+    options=df['marital'].unique(),
+    default=df['marital'].unique()
+)
+
+# Filter dataframe
+df_filtered = df[
+    (df['job'].isin(job_filter)) &
+    (df['education'].isin(education_filter)) &
+    (df['marital'].isin(marital_filter))
+]
+
+# -----------------------------
+# Key Metrics (KPIs)
+# -----------------------------
+st.title("💰 Bank Marketing Dashboard")
+
+total_clients = len(df_filtered)
+subscribed_count = df_filtered['y'].value_counts().get('yes', 0)
+conversion_rate = round((subscribed_count / total_clients) * 100, 2) if total_clients > 0 else 0
+
+col1, col2, col3 = st.columns(3)
+col1.metric("Total Clients", total_clients)
+col2.metric("Subscribed (Yes)", subscribed_count)
+col3.metric("Conversion Rate (%)", f"{conversion_rate}%")
+
+st.markdown("---")
+
+# -----------------------------
+# Charts
+# -----------------------------
+# Subscription by Job
+job_conversion = df_filtered.groupby('job')['y'].apply(lambda x: (x=='yes').mean()*100).sort_values()
+fig_job = px.bar(
+    job_conversion,
+    x=job_conversion.values,
+    y=job_conversion.index,
+    orientation='h',
+    title="Conversion Rate by Job",
+    color=job_conversion.values,
+    color_continuous_scale='Viridis'
+)
+st.plotly_chart(fig_job, use_container_width=True)
+
+# Subscription by Education
+education_conversion = df_filtered.groupby('education')['y'].apply(lambda x: (x=='yes').mean()*100).sort_values()
+fig_edu = px.bar(
+    education_conversion,
+    x=education_conversion.values,
+    y=education_conversion.index,
+    orientation='h',
+    title="Conversion Rate by Education",
+    color=education_conversion.values,
+    color_continuous_scale='Cividis'
+)
+st.plotly_chart(fig_edu, use_container_width=True)
+
+# Subscription by Contact Type
+contact_conversion = df_filtered.groupby('contact')['y'].apply(lambda x: (x=='yes').mean()*100).sort_values()
+fig_contact = px.bar(
+    contact_conversion,
+    x=contact_conversion.values,
+    y=contact_conversion.index,
+    orientation='h',
+    title="Conversion Rate by Contact Type",
+    color=contact_conversion.values,
+    color_continuous_scale='Plasma'
+)
+st.plotly_chart(fig_contact, use_container_width=True)
+
+# Subscription by Previous Outcome
+poutcome_conversion = df_filtered.groupby('poutcome')['y'].apply(lambda x: (x=='yes').mean()*100).sort_values()
+fig_poutcome = px.bar(
+    poutcome_conversion,
+    x=poutcome_conversion.values,
+    y=poutcome_conversion.index,
+    orientation='h',
+    title="Conversion Rate by Previous Campaign Outcome",
+    color=poutcome_conversion.values,
+    color_continuous_scale='Inferno'
+)
+st.plotly_chart(fig_poutcome, use_container_width=True)
+
+st.markdown("---")
+st.markdown("Data Dashboard for Bank Marketing Campaign - Explore customer trends and conversion insights interactively.")
 
