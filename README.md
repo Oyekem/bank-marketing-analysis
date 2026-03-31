@@ -1,12 +1,12 @@
 # Project Data Analytics: Bank Marketing Dataset EDA
 
 
-________________________________________________________________________________________________________________________________
+
 ## 📚 Table of Contents
 Project Data Analytics: Bank Marketing Prediction
-- 📚 [Table of Contents](#Table of Contents)
+- 📚 [Go to Table of Contents](##Table of Contents)
 - 🎯 Introduction
-- 💻 Installation
+- 💻 InstallationgO
 - 🔄 Project Workflow
 - 🗂️ Dataset Overview
 - 📈 Dashboard Explanation
