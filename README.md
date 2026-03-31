@@ -3,8 +3,8 @@
 
 
 ## 📚 Table of Contents
-[Project Data Analytics: Bank Marketing Analysis] (Project Data Analytics: Bank Marketing Analysis)
-- 📚 [Go-to-Table-of-Contents](##Table-of-Contents)
+[Project Data Analytics: Bank Marketing Analysis] (Project-Data-Analytics-Bank-Marketing-Analysis)
+- 📚 [Table of Contents](##Table-of-Contents)
 - 🎯 Introduction
 - 💻 InstallationgO
 - 🔄 Project Workflow
