@@ -4,12 +4,12 @@
 
 ## 📚 Table of Contents
 Project Data Analytics: Bank Marketing Prediction
-📚 Table of Contents
-🎯 Introduction
-💻 Installation
-🔄 Project Workflow
-🗂️ Dataset Overview
-📈 Dashboard Explanation
+- 📚 Table of Contents
+- 🎯 Introduction
+- 💻 Installation
+- 🔄 Project Workflow
+- 🗂️ Dataset Overview
+- 📈 Dashboard Explanation
 
 
 🎯 Introduction
