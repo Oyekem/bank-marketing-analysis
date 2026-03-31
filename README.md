@@ -35,27 +35,30 @@ streamlit run bank_marketing_dashboard.py
 The dashboard will open in your default web browser, showing interactive visualizations.
 
 
-🔄 Project Workflow
+## 🔄 Project Workflow
 1. Data Wrangling
 Load the CSV dataset using Pandas
 Handle missing and duplicate values
 Detect and treat outliers (IQR capping, winsorization)
 Check for skewness and optionally log-transform numeric features
+
 2. Exploratory Data Analysis (EDA)
 Visualize target distribution
 Analyze numerical features (age, balance, duration, campaign, previous, pdays)
 Analyze categorical features (job, marital, education, contact, poutcome)
 Extract insights to guide marketing strategy
+
 3. Feature Engineering
 Encode categorical features for modeling
 Prepare features for machine learning models (optional step if predicting y)
+
 4. Dashboard Visualization
 Build an interactive dashboard using Streamlit
 Users can filter data by features such as job, education, marital status, contact type, and month
 Visualizations include bar charts, line charts, and KPIs for customer subscriptions
 
 
-🗂️ Dataset Overview
+## 🗂️ Dataset Overview
 Source: Kaggle, CSV format
 Rows: ~45,211
 Columns / Features: 17
@@ -365,45 +368,9 @@ Perform feature selection and engineering for improved modeling
 
 
 
-📁 Project Structure
-
-bank-marketing-analysis/
-│
-├── data/                  # Raw and processed datasets
-├── notebooks/             # Jupyter notebooks
-│   └── bank_marketing_eda.ipynb
-├── images/                # Charts and visualizations
-├── README.md              # Project documentation
 
 
 
 🔗 GitHub Repository
 
 👉 [Add Your GitHub Link Here]
-
-
-
-If you want, I can also create a visually enhanced README version with embedded charts and color highlights to make it look GitHub-ready and more professional.
-
-Do you want me to do that next?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="81" height="32766" alt="image" src="https://github.com/user-attachments/assets/71810979-662d-4557-9f11-ad7ee52f14e8" />
-
