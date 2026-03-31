@@ -3,13 +3,13 @@
 
 
 ## 📚 Table of Contents
-[Project Data Analytics: Bank Marketing Analysis](Project-Data-Analytics-Bank-Marketing-Analysis)
-- 📚 [Table of Contents](##Table-of-Contents)
-- 🎯 [Introduction](Introduction)
-- 💻 [Installation](Installation)
-- 🔄 [Project Workflow](Project-Workflow)
-- 🗂️ [Dataset Overview](Dataset-Overview)
-- 📈 [Dashboard Explanation](Dashboard-Explanation)
+[Project Data Analytics: Bank Marketing Analysis](#-project-data-analytics-bank-marketing-analysis)
+- 📚 [Table of Contents](#-table-of-contents)
+- 🎯 [Introduction](#-introduction)
+- 💻 [Installation](#-installation)
+- 🔄 [Project Workflow](#project-workflow)
+- 🗂️ [Dataset Overview](#-dataset-overview)
+- 📈 [Dashboard Explanation](#-dashboard-explanation)
 
 
 ## 🎯 Introduction
