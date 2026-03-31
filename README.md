@@ -3,23 +3,23 @@
 
 
 ## 📚 Table of Contents
-[Project Data Analytics: Bank Marketing Analysis] (Project-Data-Analytics-Bank-Marketing-Analysis)
+[Project Data Analytics: Bank Marketing Analysis](Project-Data-Analytics-Bank-Marketing-Analysis)
 - 📚 [Table of Contents](##Table-of-Contents)
-- 🎯 Introduction
-- 💻 InstallationgO
-- 🔄 Project Workflow
-- 🗂️ Dataset Overview
-- 📈 Dashboard Explanation
+- 🎯 [Introduction](Introduction)
+- 💻 [Installation](Installation)
+- 🔄 [Project Workflow](Project-Workflow)
+- 🗂️ [Dataset Overview](Dataset-Overview)
+- 📈 [Dashboard Explanation](Dashboard-Explanation)
 
 
-🎯 Introduction
+## 🎯 Introduction
 This project analyzes the Bank Marketing dataset, which contains information about clients, their demographics, and marketing campaigns conducted by a Portuguese bank. The goal is to predict whether a client will subscribe to a term deposit (y) and extract insights for marketing strategy optimization.
 The project leverages Python, Pandas, Plotly, Seaborn, and Streamlit for data analysis, visualization, and dashboard creation.
 
 
-💻 Installation
+## 💻 Installation
 Follow these steps to set up the project locally:
-1. Clone the repository
+ 1. Clone the repository
 git clone https://github.com/<your-username>/bank-marketing-dashboard.git
 2. Set up a virtual environment (optional but recommended)
 python -m venv env
