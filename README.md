@@ -19,8 +19,9 @@ The project leverages Python, Pandas, Plotly, Seaborn, and Streamlit for data an
 
 ## 💻 Installation
 Follow these steps to set up the project locally:
- 1. Clone the repository
+1. Clone the repository
 git clone https://github.com/<your-username>/bank-marketing-dashboard.git
+
 2. Set up a virtual environment (optional but recommended)
 python -m venv env
 Activate the environment:
@@ -28,8 +29,10 @@ Windows:
 .\env\Scripts\activate
 MacOS/Linux:
 source env/bin/activate
+
 3. Install the dependencies
 pip install -r requirements.txt
+
 4. Run the dashboard
 streamlit run bank_marketing_dashboard.py
 The dashboard will open in your default web browser, showing interactive visualizations.
@@ -37,26 +40,65 @@ The dashboard will open in your default web browser, showing interactive visuali
 
 ## 🔄 Project Workflow
 1. Data Wrangling
-Load the CSV dataset using Pandas
-Handle missing and duplicate values
-Detect and treat outliers (IQR capping, winsorization)
-Check for skewness and optionally log-transform numeric features
 
-2. Exploratory Data Analysis (EDA)
-Visualize target distribution
-Analyze numerical features (age, balance, duration, campaign, previous, pdays)
-Analyze categorical features (job, marital, education, contact, poutcome)
-Extract insights to guide marketing strategy
+The first step of the project is to clean and prepare the bank marketing dataset for analysis. The data wrangling process includes:
 
-3. Feature Engineering
-Encode categorical features for modeling
-Prepare features for machine learning models (optional step if predicting y)
+- Loading the dataset from CSV using Pandas
+- Handling missing values and identifying “unknown” entries
+- Handling duplicate records (if any)
+- Correcting inconsistent data types across features
+- Detecting and treating outliers using IQR and winsorization
+- Handling skewed numerical features (log transformation where necessary)
+- Preserving meaningful encoded values (e.g., pdays = -1, previous = 0)
+- Standardizing and cleaning categorical variables for analysis
+- Preparing the dataset for exploratory analysis and modeling
 
-4. Dashboard Visualization
-Build an interactive dashboard using Streamlit
-Users can filter data by features such as job, education, marital status, contact type, and month
-Visualizations include bar charts, line charts, and KPIs for customer subscriptions
+2. Exploratory Data Analysis
 
+The second step of the project is to explore the dataset and extract meaningful insights about customer behavior and marketing effectiveness. The exploratory data analysis process includes:
+
+- Target Variable Analysis
+- Understanding subscription distribution and class imbalance (~11.7% subscribed)
+Numerical Feature Analysis
+Analyzing variables such as age, balance, duration, campaign, pdays, and previous
+Categorical Feature Analysis
+Exploring job, marital status, education, contact type, and poutcome
+Bivariate Analysis
+Examining relationships between features and subscription outcome (y)
+Campaign Performance Analysis
+Understanding how call duration, frequency, and previous outcomes affect conversion
+Customer Segmentation Analysis
+Identifying high-performing groups (students, retired, management, educated clients)
+Seasonality Analysis
+Evaluating the effect of months on campaign success
+
+3. Data Visualization
+
+The third step of the project is to visualize the data and communicate insights effectively. The data visualization process includes:
+
+Visualizing subscription distribution (class imbalance)
+Visualizing numerical features using histograms and boxplots
+Visualizing categorical features using count plots and bar charts
+Visualizing relationship between call duration and subscription probability
+Visualizing campaign frequency vs subscription success
+Visualizing previous campaign outcomes vs subscription
+Visualizing customer segments (job, education, marital status) vs conversion rate
+Visualizing contact channel effectiveness (cellular vs telephone)
+Correlation heatmap for numerical features
+Identifying trends and patterns across features
+
+4. Dashboard
+
+The last step of the project is to create an interactive dashboard for insights and decision-making. The dashboard includes:
+
+Customer subscription KPIs (conversion and non-conversion rates)
+Interactive filters (job, education, marital status, contact type, month)
+Visualization of subscription rates across customer segments
+Analysis of campaign performance (duration, frequency, previous outcomes)
+Comparison of communication channels (cellular vs telephone)
+Insights on seasonality and campaign timing
+Identification of high-value customer segments
+Actionable marketing recommendations based on data insights
 
 ## 🗂️ Dataset Overview
 Source: Kaggle, CSV format
