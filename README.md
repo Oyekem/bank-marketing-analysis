@@ -6,6 +6,7 @@
 [Project Data Analytics: Bank Marketing Analysis](#-project-data-analytics-bank-marketing-analysis)
 - 📚 [Table of Contents](#-table-of-contents)
 - 🎯 [Introduction](#-introduction)
+- 🎯 [Objectives](#-objectives)
 - 💻 [Installation](#-installation)
 - 🔄 [Project Workflow](#project-workflow)
 - 🗂️ [Dataset Overview](#-dataset-overview)
@@ -15,6 +16,13 @@
 ## 🎯 Introduction
 This project analyzes the Bank Marketing dataset, which contains information about clients, their demographics, and marketing campaigns conducted by a Portuguese bank. The goal is to predict whether a client will subscribe to a term deposit (y) and extract insights for marketing strategy optimization.
 The project leverages Python, Pandas, Plotly, Seaborn, and Streamlit for data analysis, visualization, and dashboard creation.
+
+
+## 🎯 Objectives
+- Understand customer behavior and subscription patterns
+- Clean and preprocess the dataset for accurate analysis
+- Identify key variables influencing marketing campaign success
+- Generate actionable insights to support data-driven decision-making
 
 
 ## 💻 Installation
