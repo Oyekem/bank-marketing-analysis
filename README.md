@@ -116,28 +116,29 @@ The last step of the project is to create an interactive dashboard for insights 
 
 
 ## 🗂️ Dataset Overview
-Source: Kaggle, CSV format
-Rows: ~ 45,211
-Columns / Features: 17
-Target Variable: y (term deposit subscription: "yes"/"no")
+- Source: Kaggle, CSV format
+- Rows: ~ 45,211
+- Columns / Features: 17
+- Target Variable: y (term deposit subscription: "yes"/"no")
+
 Key Features
 Feature
-age
-job
-marital
-education
-default
-balance
-housing
-loan
-contact
-day
-month
-duration
-campaign
-pdays
-previous
-poutcome
+- age
+- job
+- marital
+- education
+- default
+- balance
+- housing
+- loan
+- contact
+- day
+- month
+- duration
+- campaign
+- pdays
+- previous
+- poutcome
 
 
 ## 📈 Dashboard Explanation
